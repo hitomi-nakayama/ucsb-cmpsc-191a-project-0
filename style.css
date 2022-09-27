@@ -1,3 +1,56 @@
+/* https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: pink;
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-weight: bold;
+}
+
+h1 a {
+    text-decoration: none;
+    color: aquamarine;
+    text-shadow: black 3px 3px;
+    font-size: 32pt;
+}
+
+.header-subtitle {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-decoration: none;
+    color: aquamarine;
+    text-shadow: black 1px 1px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+section {
+    background-color: #fff4f6;
+    padding: 20px;
+}
+
+article {
+    margin-top: 30px;
+    font-size: 12pt;
+}
+
 table {
     border-collapse: collapse;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse */
@@ -12,4 +65,43 @@ td {
     border: 1px solid black;
     margin: 0;
     padding: 0;
+}
+
+footer {
+    background-color: #fff4f6;
+}
+
+.marquee {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* https://www.quackit.com/css/codes/marquees/ */
+.marquee-text {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: marquee-animation 15s linear infinite;
+    color: aquamarine;
+    overflow: visible;
+    white-space: nowrap;
+}
+
+@keyframes marquee-animation {
+ 0%   {
+ transform: translateX(100%);
+ }
+ 100% {
+ transform: translateX(-100%);
+ }
+}
+
+#html5-validator {
+    height: 31px;
+}
+
+.construction-sign {
+    margin: 0 20px;
+    height: 64px;
 }
